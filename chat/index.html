@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Live Chat</title>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      function getMessages() {
+          $.get("chat.txt", setText);
+          var t = setTimeout(getMessages, 500);
+      }
+      function setText(data,status) {
+          var result = data.replace(/pizello/g, " <br> ");
+          document.getElementById('chat').innerHTML = result
+      }
+    </script>
+</head>
+<body onload="getMessages()">
+  <div class="splash cover"></div>
+  
+  <form action = "./gettext.php" method = "POST">
+  	Insert your name <br>
+    <input type = "text" name = "name" placeholder = "nope, thanks"/> <br>
+    Insert your message <br>
+    <!--
+    <textarea name="message" type="text" rows="4" autofocus="autofocus" onfocus="this.select()" style="border: none; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;"></textarea>
+    <br> 
+    -->
+    <input type = "text" name = "message" autofocus="autofocus" style="width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" required /> <br>
+    
+    <input type = "submit" />
+  </form>
+
+  
+  <br>
+  <div class="overlay" id="chat">Chat loading...</div>
+
+</body>
+</html>
