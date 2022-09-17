@@ -7,14 +7,23 @@
     <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
-      function getMessages() {
-          $.get("chat.txt", setText);
-          var t = setTimeout(getMessages, 500);
-      }
-      function setText(data,status) {
-          var result = data.replace(/pizello/g, " <br> ");
-          document.getElementById('chat').innerHTML = result
-      }
+        function getMessages() {
+            var url = 'http://pompala.altervista.org/chat/chat.txt';
+            var storedText;
+
+            fetch(url)
+            .then(function(response) {
+                response.text().then(function(text) {
+                storedText = text;
+                done();
+                });
+            });
+
+            function done() {
+                var result = storedText.replace(/pizello/g, " <br> ");
+                document.getElementById('chat').innerHTML = result
+            }
+        }
     </script>
 </head>
 <body onload="getMessages()">

@@ -5,14 +5,14 @@ $time = gmdate ("H:i:s");
 $ip = $_SERVER['REMOTE_ADDR'];
 $hostname = gethostbyaddr($ip);
 if ($_POST["name"]=="")
-	$name = "Anonimo";
+	$name = "Anonym";
 else 
 	$name = $_POST["name"];
 $message .= "pizello============================================================pizello";
-$message .= "Utente: ".$name."  (IP: ".$ip.")pizello";
+$message .= "User: ".$name."  (IP: ".$ip.")pizello";
 $message .= "Time : ".$time." / ".$date." pizello";
 $message .= "----------pizello";
-$message .= "Messaggio: ".$_POST['message']."pizello";
+$message .= "Message: ".$_POST['message']."pizello";
 
 $handle = fopen("chat.txt", "r");
 if ($handle) {
