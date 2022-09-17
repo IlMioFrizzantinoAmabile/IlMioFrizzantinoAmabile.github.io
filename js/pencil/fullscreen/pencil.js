@@ -6,6 +6,8 @@ var spread = 5;
 var darkness = 15;
 var density = 2000;
 
+var incremento = 1;
+
 function setup() {
   createCanvas(windowWidth, windowHeight);
   background(255,255,255);
@@ -21,15 +23,19 @@ function draw() {
     y[i] = y[i] + map(Math.random(),0,1,-spread,spread);
   }
 
-  x = x + 1;
+  x = x + incremento;
   
   if (x>width){
     //saveCanvas('output'+j+'.jpg', 'jpg');
-    background(255,255,255);
-    x=0;
+    //background(255,255,255);
+    //x=0;
+    incremento = -1;
     j = j + 1;
   }
-  
+  if (x<0){
+  	//background(255,255,255);
+  	incremento = 1;
+  }
 }
 
 function reset(){
