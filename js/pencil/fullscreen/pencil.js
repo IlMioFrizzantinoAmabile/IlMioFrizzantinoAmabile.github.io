@@ -1,12 +1,12 @@
 var x;
 var y;
-var j = 0;
+var incremento;
 
 var spread = 5;
 var darkness = 15;
 var density = 2000;
 
-var incremento = 1;
+var dice = 0;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -19,31 +19,32 @@ function draw() {
 
   fill(0,0,0,darkness);
   for(var i=0; i<density; i++){
-    ellipse(x,y[i],2,2);
+    ellipse(x[i],y[i],2,2);
     y[i] = y[i] + map(Math.random(),0,1,-spread,spread);
-  }
-
-  x = x + incremento;
-  
-  if (x>width){
-    //saveCanvas('output'+j+'.jpg', 'jpg');
-    //background(255,255,255);
-    //x=0;
-    incremento = -1;
-    j = j + 1;
-  }
-  if (x<0){
-  	//background(255,255,255);
-  	incremento = 1;
+	
+    dice = map(Math.random(),0,1,0,6);
+    console.log(dice)
+	if (dice>1){
+      x[i] = x[i] + incremento[i];
+	}
+    if (x[i]>width){
+      incremento[i] = -1;
+    }
+    if (x[i]<0){
+      incremento[i] = 1;
+    }
   }
 }
 
 function reset(){
   
-  x = 0;
+  x = [];
   y = [];
+  incremento = [];
   for(var i=0; i<density; i++){
+  	x.push(0);
     y.push(height/2);
+    incremento.push(1);
   }
   
 }
