@@ -1,58 +1,193 @@
+<!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>About me</title>
-    <link rel="stylesheet" href="../stylesheets/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet">
-  </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Marco Miani's homepage.">
+    <meta name="keywords" content="marco miani, math, learning">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Marco Miani</title>
+</head>
 
-<body>
-  <div class="Nav bar">
-    <!-- my links -->
-  	<div class="social"><li></li></div>
-    <div class="subnav">
-    	<a href="https://github.com/IlMioFrizzantinoAmabile"> 
-        <img src="logos/github.png" style="width:42px;height:42px;"> </a>
-    </div>
-    <div class="subnav">
-    	<a href="https://scholar.google.com/citations?user=tYLBBmEAAAAJ"> 
-        <img src="logos/scholar.png" style="width:42px;height:42px;"> </a>
-    </div>
-    <div class="subnav">
-    	<a href="https://www.kaggle.com/marcomio"> 
-        <img src="logos/kaggle.png" style="width:42px;height:42px;"> </a>
-    </div>
-    <div class="subnav">
-    	<a href="https://twitter.com/marco_miani"> 
-        <img src="logos/twitter.png" style="width:42px;height:42px;"> </a>
-    </div>
-    <div class="subnav">
-    	<a href="https://www.youtube.com/c/MarcoMiani_official"> 
-        <img src="logos/youtube.png" style="width:42px;height:42px;"> </a>
-    </div>
-    <div class="subnav">
-    	<a href="https://www.linkedin.com/in/marco-miani/"> 
-        <img src="logos/linkedin.png" style="width:42px;height:42px;"> </a>
-    </div>
-    <div class="subnav">
-    	<a href="https://github.com/IlMioFrizzantinoAmabile/IlMioFrizzantinoAmabile.github.io/raw/main/app/deh.apk"> 
-        <img src="logos/dolphin.jpeg" style="width:42px;height:42px;"> </a>
-    </div>
-  </div>
-
-
-  <div class="splash cover">
-
-    <!-- js sketch background -->
-    <iframe id="sketch-container" src="../js/moon/fullscreen/"></iframe>
-
-    <!-- text overlay -->
-    <div class="big overlay">I am Marco</div>
-    <div class="overlay">and I will complete this page before these lines fill this circle</div>
-    <div class="overlayWHITE">(probably)</div>
-
-  </div>
+<body class="pulp">
+    <main>
+        <header>
+            <nav> <a href="#" title="Marco Miani" class="logo">
+                    <figure> <svg fill="none" height="71" viewBox="0 0 40 71" width="40" xmlns="http://www.w3.org/2000/svg">
+                            <path d="m18 0h4v38h-4z" fill="#000" class="cable"></path>
+                            
+                            <path d="m0 0h34v3h-34z" fill="#c4c4c4" transform="matrix(1 0 0 -1 3 71)"></path>
+                        </svg> </figure>
+                </a>
+                <ul class="menu">
+                    <li><a href="#publications">Publications</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <section class="introduction">
+            <div class="content">
+                <header>
+                    <h1>Hi.<br> I am <i>Marco</i>.</h1>
+                    <h2>I like spartans layouts. <br> I don't like easily readable writings. <br> I don't like easily navigable websites.</h2>
+                </header>
+            </div>
+        </section>
+        
+        <section class="work" id="publications">
+            <div class="content">
+                <header>
+                    <h1>Publications</h1>
+                    <h3>Outcome of my research from 2021 to present.</h3>
+                </header>
+                <div class="container">
+                    <section class="selection">
+                        <ul class="items">
+                            <li>
+                                <article style="background-color:#383c41;background-image:url(imgs/lae.png)">
+                                    <header> <cite>Laplacian AutoEncoder</cite> </header>
+                                </article>
+                                <div class="caption">
+                                    <p> <em>Laplacian Autoencoders for Learning Stochastic Representations. </em>
+                                    <a href="https://arxiv.org/abs/2206.15078" target="_blank">ArXiv</a>.
+                                    <a href="https://openreview.net/forum?id=aaar9y7qjfw" target="_blank">Neurips</a>. </p>
+                                    <p>Established methods for unsupervised representation learning such as variational autoencoders produce none or poorly calibrated <i>uncertainty</i> estimates making it difficult to evaluate if learned representations are stable and reliable. 
+                                    In this work, we present a <i>Bayesian autoencoder for unsupervised representation learning</i>, which is trained using a novel variational lower-bound of the autoencoder evidence. 
+                                    This is maximized using Monte Carlo EM with a variational distribution that takes the shape of a Laplace approximation. 
+                                    We develop a <i>new Hessian approximation</i> that scales linearly with data size allowing us to model high-dimensional data. 
+                                    Empirically, we show that our Laplacian autoencoder estimates well-calibrated uncertainties in both latent and output space. 
+                                    We demonstrate that this results in improved performance across a multitude of downstream tasks. </p>
+                                </div>
+                            </li>
+                            <li>
+                                <article style="background-color:#c7c1bb;background-image:url(imgs/lam.png)">
+                                    <header> <cite>Bayesian Metric Learning</cite> </header>
+                                </article>
+                                <div class="caption">
+                                    <p><em>Bayesian Metric Learning for Uncertainty Quantification in Image Retreival. </em>
+                                    <a href="https://arxiv.org/abs/2302.01332" target="_blank">ArXiv</a>.</p>
+                                    <p>We propose the first <i>Bayesian encoder for metric learning</i>. 
+                                    Rather than relying on neural amortization as done in prior works, we learn a distribution over the network weights with the Laplace Approximation. 
+                                    We actualize this by first proving that the contrastive loss is a valid log-posterior. 
+                                    We then propose three methods that ensure a positive definite Hessian. 
+                                    Lastly, we present a novel decomposition of the Generalized Gauss-Newton approximation. 
+                                    Empirically, we show that our Laplacian Metric Learner (LAM) estimates well-calibrated uncertainties, reliably detects out-of-distribution examples, and yields state-of-the-art predictive performance.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <article style="background-color:#e9aac6;background-image:url(imgs/laplace-segmentation.png)">
+                                    <header> <cite>Bayesian Skip Connections</cite> </header>
+                                </article>
+                                <div class="caption">
+                                    <p><em>Laplacian Segmentation Networks: Improved Epistemic Uncertainty from Spatial Aleatoric Uncertainty. </em>
+                                     <a href="https://arxiv.org/abs/2303.13123" target="_blank">ArXiv</a>.</p>
+                                    <p> Out of distribution (OOD) medical images are frequently encountered, e.g. because of site- or scanner differences, or image corruption. 
+                                    OOD images come with a risk of incorrect image segmentation, potentially negatively affecting downstream diagnoses or treatment. 
+                                    To ensure robustness to such incorrect segmentations, we propose <i>Laplacian Segmentation Networks</i>, (LSN) that jointly model <i>epistemic</i> (model) and <i>aleatoric</i> (data) uncertainty in image segmentation. 
+                                    We capture data uncertainty with a spatially correlated logit distribution. 
+                                    For model uncertainty, we propose the first Laplace approximation of the weight posterior that scales to large neural networks with skip connections that have high-dimensional outputs. 
+                                    Empirically, we demonstrate that modelling spatial pixel correlation allows the Laplacian Segmentation Network to successfully assign high epistemic uncertainty to out-of-distribution objects appearing within images. </p>
+                                </div>
+                            </li>
+                            <li>
+                                <article style="background-color:#573ead;background-image:url(imgs/ce.png)">
+                                    <header> <cite>Curious Explorer</cite> </header>
+                                </article>
+                                <div class="caption">
+                                    <p><em>Curious Explorer: a provable exploration strategy in Policy Learning. </em>
+                                     <a href="https://arxiv.org/abs/2106.15503" target="_blank">ArXiv</a>.</p>
+                                    <p> Having access to an exploring restart distribution is critical with policy gradient methods in <i>Reinforcement Learning</i>. 
+                                    However, this assumption can be unfeasible in certain environments, for instance when learning is online, or when restarts are possible only from a fixed initial state. 
+                                    In these cases, classical policy gradient algorithms can have very poor convergence properties and sample efficiency. 
+                                    In this paper, we develop Curious Explorer, a novel and simple iterative <i>state space exploration strategy</i>.
+                                    Curious Explorer uses intrinsic rewards assigned to the set of poorly visited states produces a sequence of policies, each one more exploratory than the previous one in an informed way.
+                                    We provide theoretical upper bounds on how often an optimal policy visits poorly visited states. </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </section>
+        
+        <section class="projects" id="projects">
+            <div class="content">
+                <header>
+                    <h1>Projects</h1>
+                    <h3>Collection of random cool stuff.</h3>
+                </header>
+                <div class="splash">
+                    <iframe id="sketch-container" src="../js/flowers/fullscreen/"></iframe>
+                </div>
+                <div class="side-by-side">
+                    <ul class="items">
+                        <li> <a href="https://www.youtube.com/playlist?list=PLdcSYL-YX3jNRBHNBjbwKDSDVsWhZqxYx" title="to Youtube">
+                                <figure>
+                                    <div class="artwork" style="background-image:url(imgs/youtube.png)"></div>
+                                </figure> <cite>Video Editing fun</cite>
+                            </a> </li>
+                        <li> <a href="https://github.com/IlMioFrizzantinoAmabile/IlMioFrizzantinoAmabile.github.io/raw/main/app/deh.apk" title="Android App">
+                                <figure>
+                                    <div class="artwork" style="background-image:url(imgs/dolphin.jpeg)"></div>
+                                </figure> <cite>Best ever Android app</cite>
+                            </a> </li>
+                        <li> <a href="https://ilmiofrizzantinoamabile.github.io/js/flowers/" title="Drawing">
+                                <figure>
+                                    <div class="artwork" style="background-image:url(imgs/flowers.png)"></div>
+                                </figure> <cite>Draw flowers with js</cite>
+                            </a> </li>
+                    </ul>
+                    <aside class="notes">
+                        <p>Right here you’ll find assorted links to assorted projects. As you may notice i love to waste my time in random stuff.</p>
+                        <blockquote> “Programming is like flipping burgers with a keyboard.” <br><small>—<a href="https://twitter.com/swiftonsecurity/status/699811103677648896" target="_blank">Taylor Swift</a></small> </blockquote>
+                    </aside>
+                </div>
+            </div>
+        </section>
+        <section class="about" id="about">
+            <div class="content">
+                <header>
+                    <h1>About</h1>
+                    <h3>Attempt to resume myself in 10 lines + a bunch of links.</h3>
+                </header>
+                <div class="side-by-side">
+                    <article>
+                        <figure class="photo"> <img src="imgs/fotoprof.jpg" width="200" height="200" title="Me"> </figure>
+                        <p>I am Marco Miani, mathematician and passionate about everything that is simple but not trivial. 
+                        	I graduated at <a href="https://sns.it/" title="sns" target="_blank">Scuola Normale Superiore</a> in Pisa.
+                            I'm now a PhD researcher in the Cognitive Systems section at <a href="https://dtu.dk/" title="sns" target="_blank">Technical University of Denmark</a> in Copenaghen.
+                        </p>
+                        <p>I’m currently working on deep learning theory.</p>
+                        <p>Outside of science, I enjoy trampolines, fpv drones and onewheels.</p>
+                    </article>
+                    <nav class="links">
+                        <ul>
+                            <li><a href="https://scholar.google.com/citations?user=tYLBBmEAAAAJ">Google Scholar</a></li>
+                            <li><a href="https://github.com/IlMioFrizzantinoAmabile">My Github account</a></li>
+                            <li><a href="https://www.kaggle.com/marcomio">My Kaggle profile</a></li>
+                            <li><a href="https://www.youtube.com/c/MarcoMiani_official">My Youtube channel</a></li>
+                            <li><a href="https://twitter.com/marco_miani">Me on Twitter</a></li>
+                            <li><a href="https://www.instagram.com/ilmiofrizzantinoamabile/">Me on Instagram</a></li>
+                            <li><a href="https://www.linkedin.com/in/marco-miani/">Me on LinkedIn</a></li>
+                            <li style="color:#FF1493"><a href="mailto:marco.miani.zurlu@gmail.com?subject=Ciao">Send me an email</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="content">
+                <p>Made with love in Chiani, Italia.</p>
+            </div>
+        </footer>
+    </main>
+    <script src="/mat.js"></script>
 </body>
 
-<!-- dude why are you even reading this? -->
+</html>

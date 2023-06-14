@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'Noe Text';
+    src: url('NoeText.woff2') format('woff2'),
+        url('NoeText.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noe Text';
+    src: url('NoeText-Bold.woff2') format('woff2'),
+        url('NoeText-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noe Text';
+    src: url('NoeText-SemiBoldItalic.woff2') format('woff2'),
+        url('NoeText-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Noe Text';
+    src: url('NoeText-BoldItalic.woff2') format('woff2'),
+        url('NoeText-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Noe Text';
+    src: url('NoeText-BlackItalic.woff2') format('woff2'),
+        url('NoeText-BlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Noe Text';
+    src: url('NoeText-SemiBold.woff2') format('woff2'),
+        url('NoeText-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noe Text';
+    src: url('NoeText-Black.woff2') format('woff2'),
+        url('NoeText-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noe Text';
+    src: url('NoeText-Italic.woff2') format('woff2'),
+        url('NoeText-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
