@@ -52,19 +52,30 @@
                     <section class="selection">
                         <ul class="items">
                             <li>
-                                <article style="background-color:#383c41;background-image:url(imgs/lae.png)">
-                                    <header> <cite>Laplacian AutoEncoder</cite> </header>
+                                <article style="background-color:#add2ff;background-image:url(imgs/sketching.png)">
+                                    <header> <cite>Uncertainty for huge models</cite> </header>
                                 </article>
                                 <div class="caption">
-                                    <p> <em>Laplacian Autoencoders for Learning Stochastic Representations. </em>
-                                    <a href="https://arxiv.org/abs/2206.15078" target="_blank">ArXiv</a>.
-                                    <a href="https://openreview.net/forum?id=aaar9y7qjfw" target="_blank">Neurips</a>. </p>
-                                    <p>Established methods for unsupervised representation learning such as variational autoencoders produce none or poorly calibrated <i>uncertainty</i> estimates making it difficult to evaluate if learned representations are stable and reliable. 
-                                    In this work, we present a <i>Bayesian autoencoder for unsupervised representation learning</i>, which is trained using a novel variational lower-bound of the autoencoder evidence. 
-                                    This is maximized using Monte Carlo EM with a variational distribution that takes the shape of a Laplace approximation. 
-                                    We develop a <i>new Hessian approximation</i> that scales linearly with data size allowing us to model high-dimensional data. 
-                                    Empirically, we show that our Laplacian autoencoder estimates well-calibrated uncertainties in both latent and output space. 
-                                    We demonstrate that this results in improved performance across a multitude of downstream tasks. </p>
+                                    <p> <em>Sketched Lanczos uncertainty score: a low-memory summary of the Fisher information. </em>
+                                    <a href="https://arxiv.org/abs/2409.15008" target="_blank">ArXiv</a>.
+                                    <a href="https://openreview.net/forum?id=1vPqOmqSfO&referrer=%5Bthe%20profile%20of%20Søren%20Hauberg%5D(%2Fprofile%3Fid%3D~Søren_Hauberg1)" target="_blank">Neurips</a>. </p>
+                                    <p>Current uncertainty quantification is memory and compute expensive, which hinders practical uptake. To counter, we develop Sketched Lanczos Uncertainty (SLU): an <i></i>architecture-agnostic</i> uncertainty score that can be applied to pre-trained neural networks with minimal overhead. 
+                                    We combine Lanczos' algorithm with dimensionality reduction techniques to compute a sketch of the leading eigenvectors of the <i>Fisher</i> information.
+                                    Empirically, SLU yields well-calibrated uncertainties even for large Vision Attention models with <i>200M parameters</i>. </p>
+                                </div>
+                            </li>
+                            <li>
+                                <article style="background-color:#fefefe;background-image:url(imgs/reparam.png)">
+                                    <header> <cite>Bayes meets reparameterizations</cite> </header>
+                                </article>
+                                <div class="caption">
+                                    <p> <em>Reparameterization invariance in approximate Bayesian inference. (SPOTLIGHT) </em>
+                                    <a href="https://arxiv.org/abs/2406.03334" target="_blank">ArXiv</a>.
+                                    <a href="https://openreview.net/attachment?id=204YOrDHny&name=pdf" target="_blank">Neurips</a>. </p>
+                                    <p>Current approximate posteriors in Bayesian neural networks (BNNs) exhibit a crucial limitation: they <i>fail</i> to maintain invariance under reparameterization, 
+                                    i.e. BNNs assign different posterior densities to different parametrizations of identical functions. 
+                                    This creates a fundamental flaw in the application of Bayesian principles as it breaks the correspondence between uncertainty over the parameters with uncertainty over the parametrized function. 
+                                    <i>In this paper</i>, we investigate this issue by developing a new geometric view of reparametrizations. </p>
                                 </div>
                             </li>
                             <li>
@@ -73,7 +84,8 @@
                                 </article>
                                 <div class="caption">
                                     <p><em>Bayesian Metric Learning for Uncertainty Quantification in Image Retreival. </em>
-                                    <a href="https://arxiv.org/abs/2302.01332" target="_blank">ArXiv</a>.</p>
+                                    <a href="https://arxiv.org/abs/2302.01332" target="_blank">ArXiv</a>.
+                                    <a href="https://proceedings.neurips.cc/paper_files/paper/2023/hash/da7ce04b3683b173691ecbb801f2690f-Abstract-Conference.html" target="_blank">Neurips 2023</a>.</p>
                                     <p>We propose the first <i>Bayesian encoder for metric learning</i>. 
                                     Rather than relying on neural amortization as done in prior works, we learn a distribution over the network weights with the Laplace Approximation. 
                                     We actualize this by first proving that the contrastive loss is a valid log-posterior. 
@@ -83,12 +95,28 @@
                                 </div>
                             </li>
                             <li>
+                                <article style="background-color:#383c41;background-image:url(imgs/lae.png)">
+                                    <header> <cite>Laplacian AutoEncoder</cite> </header>
+                                </article>
+                                <div class="caption">
+                                    <p> <em>Laplacian Autoencoders for Learning Stochastic Representations. </em>
+                                    <a href="https://arxiv.org/abs/2206.15078" target="_blank">ArXiv</a>.
+                                    <a href="https://openreview.net/forum?id=aaar9y7qjfw" target="_blank">Neurips 2022</a>. </p>
+                                    <p>Established methods for unsupervised representation learning such as variational autoencoders produce none or poorly calibrated <i>uncertainty</i> estimates making it difficult to evaluate if learned representations are stable and reliable. 
+                                    In this work, we present a <i>Bayesian autoencoder for unsupervised representation learning</i>, which is trained using a novel variational lower-bound of the autoencoder evidence. 
+                                    This is maximized using Monte Carlo EM with a variational distribution that takes the shape of a Laplace approximation. 
+                                    We develop a <i>new Hessian approximation</i> that scales linearly with data size allowing us to model high-dimensional data. 
+                                    Empirically, we show that our Laplacian autoencoder estimates well-calibrated uncertainties in both latent and output space. </p>
+                                </div>
+                            </li>
+                            <li>
                                 <article style="background-color:#e9aac6;background-image:url(imgs/laplace-segmentation.png)">
                                     <header> <cite>Bayesian Skip Connections</cite> </header>
                                 </article>
                                 <div class="caption">
                                     <p><em>Laplacian Segmentation Networks: Improved Epistemic Uncertainty from Spatial Aleatoric Uncertainty. </em>
-                                     <a href="https://arxiv.org/abs/2303.13123" target="_blank">ArXiv</a>.</p>
+                                     <a href="https://arxiv.org/abs/2303.13123" target="_blank">ArXiv</a>.
+                                     <a href="https://papers.miccai.org/miccai-2024/442-Paper1339.html" target="_blank">Miccai 2024</a>.</p>
                                     <p> Out of distribution (OOD) medical images are frequently encountered, e.g. because of site- or scanner differences, or image corruption. 
                                     OOD images come with a risk of incorrect image segmentation, potentially negatively affecting downstream diagnoses or treatment. 
                                     To ensure robustness to such incorrect segmentations, we propose <i>Laplacian Segmentation Networks</i>, (LSN) that jointly model <i>epistemic</i> (model) and <i>aleatoric</i> (data) uncertainty in image segmentation. 
@@ -103,9 +131,10 @@
                                 </article>
                                 <div class="caption">
                                     <p><em>Curious Explorer: a provable exploration strategy in Policy Learning. </em>
-                                     <a href="https://arxiv.org/abs/2106.15503" target="_blank">ArXiv</a>.</p>
+                                     <a href="https://arxiv.org/abs/2106.15503" target="_blank">ArXiv</a>.
+                                     <a href="https://ieeexplore.ieee.org/document/10680592" target="_blank">IEEE 2024</a>.</p>
                                     <p> Having access to an exploring restart distribution is critical with policy gradient methods in <i>Reinforcement Learning</i>. 
-                                    However, this assumption can be unfeasible in certain environments, for instance when learning is online, or when restarts are possible only from a fixed initial state. 
+                                    However, this assumption can be unfeasible in certain environments. 
                                     In these cases, classical policy gradient algorithms can have very poor convergence properties and sample efficiency. 
                                     In this paper, we develop Curious Explorer, a novel and simple iterative <i>state space exploration strategy</i>.
                                     Curious Explorer uses intrinsic rewards assigned to the set of poorly visited states produces a sequence of policies, each one more exploratory than the previous one in an informed way.
@@ -177,7 +206,7 @@
                             <li><a href="https://twitter.com/marco_miani">Me on Twitter</a></li>
                             <li><a href="https://www.instagram.com/ilmiofrizzantinoamabile/">Me on Instagram</a></li>
                             <li><a href="https://www.linkedin.com/in/marco-miani/">Me on LinkedIn</a></li>
-                            <li style="color:#FF1493"><a href="mailto:marco.miani.zurlu@gmail.com?subject=Ciao">Send me an email</a></li>
+                            <li style="color:#FF1493"><a href="mailto:marco.miani.zurli@gmail.com?subject=Ciao">Send me an email</a></li>
                         </ul>
                     </nav>
                 </div>
